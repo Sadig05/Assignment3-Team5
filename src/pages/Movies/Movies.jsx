@@ -16,6 +16,11 @@ const Movies = () => {
   };
 
   const handlePageChange = (event) => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
     setPage(Number(event.target.value));
   };
 
@@ -35,7 +40,7 @@ const Movies = () => {
         <p className={styles["movie-genre"]} >{movie.Genre}</p>
         <p>{movie.Runtime}</p>
         <div className={styles['movie-rating']}>
-          <img src={star} alt="" />
+          <img src={star} alt=""/>
           <p >{movie.IMDB_Rating}</p>
         </div>
         </div>
@@ -46,7 +51,7 @@ const Movies = () => {
         Previous
       </button> : ""}
       <span className={styles['pagination-current-page']}>{page}</span>
-     {page < 100 ? <button onClick={handlePageChange} value={page + 1} className={styles['pagination-button']}>
+      {page < 100 ? <button onClick={handlePageChange} value={page + 1} className={styles['pagination-button']}>
         Next
       </button> : ""}
     </div>
@@ -55,3 +60,4 @@ const Movies = () => {
 };
 
 export default Movies;
+

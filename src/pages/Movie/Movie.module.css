@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: #393e46;
+    color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .poster {
+      width: 100%;
+    }
+  
+    .details {
+      width: 100%;
+    }
+  }
+  
+  .poster {
+    width: 30%;
+    padding: 2%;
+  }
+  
+  .poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .details {
+    width: 70%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .title {
+    font-size: 2em;
+    margin-bottom: 1%;
+    color: #f96d00;
+  }
+  
+  .released,
+  .certificate,
+  .duration,
+  .genre,
+  .rating,
+  .meta,
+  .director,
+  .cast,
+  .votes,
+  .gross {
+    margin: 1% 0;
+    font-size: 1.2em;
+  }
+  
+  .overview {
+    margin: 1% 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+  .back {
+    margin-top: 2%;
+    font-size: 1.2em;
+    color: #f2f2f2;
+    background-color: #222831;
+    border: none;
+    border-radius: 5px;
+    padding: 1% 2%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .back:hover {
+    background-color: #f96d00;
+  }
+  

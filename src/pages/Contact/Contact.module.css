@@ -1,3 +1,58 @@
-.contact{
-    color: red
+.title{
+    padding: 20px;
+    text-align: center;
 }
+.form {
+    width: 500px;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px #222831;
+    background-color: #222831;
+ 
+  }
+  
+  /* add a media query to reduce the width of the form on small screens */
+  @media (max-width: 600px) {
+    .form {
+      width: 90%;
+    }
+  }
+  
+  .label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .input,
+  .textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .textarea {
+    height: 200px;
+  }
+  
+  .button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: 222831;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button:hover{
+    background-color: #f96d00;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 20px;
+  }
