@@ -1,0 +1,12 @@
+.outlet{
+    width: 80%;
+    margin: 0 auto;
+    color: #f96d00;
+}
+
+.bcg-main{
+    min-height: 100vh;
+    background-color: #393e46;
+    padding: 0 0 5% 0;
+}
+
