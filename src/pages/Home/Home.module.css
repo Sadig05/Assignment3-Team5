@@ -1,0 +1,12 @@
+.link{
+        text-decoration: none;
+        color: blue;
+}
+
+.link:hover {
+    color: darkblue;
+  }
+  
+  .link:active {
+    color: lightblue;
+  }
