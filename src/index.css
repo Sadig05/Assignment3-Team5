@@ -7,5 +7,5 @@
 
 #root{
     font-family: 'Merriweather', serif;
-    /* scroll-behavior: smooth; */
+    height: 100vh;
 }
