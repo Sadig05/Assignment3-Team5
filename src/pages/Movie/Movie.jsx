@@ -4,12 +4,17 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './Movie.module.css';
 
+
 const Movie = () => {
   const {id} = useParams();
   const [data, setData] = useState({});
   const getData = async () => {
     const { data } = await axios.get(`http://localhost:3004/movies`);
     const movie = data.find((item) => item.id == id);
+    
+    //getting poster url from public api
+    const poster = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0a1c8756239bce4542080405c0a77a97&query=${movie.Series_Title}`);
+    movie.Poster_Link = poster.data.results[0].poster_path;
     setData(movie);
   };
 
@@ -20,7 +25,7 @@ const Movie = () => {
   return (
     <section className={styles.container}>
       <div className={styles.poster}>
-        <img src={data.Poster_Link} alt={data.Series_Title} />
+        <img src={`https://image.tmdb.org/t/p/original/${data.Poster_Link}`} alt={data.Series_Title} />
       </div>
       <div className={styles.details}>
         <h2 className={styles.title}>{data.Series_Title}</h2>
