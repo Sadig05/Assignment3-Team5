@@ -1,84 +1,92 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: #393e46;
-    color: #f2f2f2;
-    border-radius: 5px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .poster {
-      width: 100%;
-    }
-  
-    .details {
-      width: 100%;
-    }
-  }
-  
-  .poster {
-    width: 30%;
-    padding: 2%;
-  }
-  
-  .poster img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  .details {
-    width: 70%;
-    padding: 2%;
-    display: flex;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
     flex-direction: column;
-    align-items: flex-start;
   }
-  
-  .title {
-    font-size: 2em;
-    margin-bottom: 1%;
-    color: #f96d00;
+
+  .poster {
+    width: 100%;
   }
-  
-  .released,
-  .certificate,
-  .duration,
-  .genre,
-  .rating,
-  .meta,
-  .director,
-  .cast,
-  .votes,
-  .gross {
-    margin: 1% 0;
-    font-size: 1.2em;
+
+  .details {
+    width: 100%;
   }
-  
-  .overview {
-    margin: 1% 0;
-    font-size: 1.2em;
-    line-height: 1.5;
-  }
-  
-  .back {
-    margin-top: 2%;
-    font-size: 1.2em;
-    color: #f2f2f2;
-    background-color: #222831;
-    border: none;
-    border-radius: 5px;
-    padding: 1% 2%;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .back:hover {
-    background-color: #f96d00;
-  }
-  
+}
+
+.poster {
+  width: 30%;
+  padding: 2%;
+}
+
+.poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.details {
+  width: 70%;
+  padding: 2%;
+}
+
+.details .title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.details .label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.details .released,
+.details .certificate,
+.details .duration,
+.details .genre,
+.details .rating,
+.details .overview,
+.details .meta,
+.details .director,
+.details .cast,
+.details .votes,
+.details .gross {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.details .overview {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.details .back {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.details .back:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+
+
+
