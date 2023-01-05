@@ -2,7 +2,6 @@ import {Route, Routes } from "react-router-dom";
 import Contact from "./pages/Contact/Contact"
 import Movies from "./pages/Movies/Movies"
 import Home from './pages/Home/Home'
-import NavBar from "./components/NavBar/NavBar";
 import SharedLayout from "./pages/SharedLayout/SharedLayout";
 import Movie from "./pages/Movie/Movie";
 function App() {
