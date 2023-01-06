@@ -6,10 +6,11 @@ import styles from './Movie.module.css';
 
 const Movie = () => {
   const { id } = useParams();
+  
   const [data, setData] = useState({});
   const getData = async () => {
     const { data: movies } = await axios.get(`http://localhost:3004/movies`);
-    const movie = movies.find(item => item.id == id);
+    const movie = movies.find(item => item.id === parseInt(id));
 
     // Getting poster URL from public API
     const poster = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=0a1c8756239bce4542080405c0a77a97&query=${movie.Series_Title}`);
